@@ -59,7 +59,21 @@ namespace LiverMDS
                GridPrincipal.Children.Add(new ImageViewer());
                break;
 
-            default:
+           case 2:
+               GridPrincipal.Children.Clear();
+               GridPrincipal.Children.Add(new ActualTasks());
+               break;
+
+           case 3:
+               GridPrincipal.Children.Clear();
+               GridPrincipal.Children.Add(new Settings());
+               break;
+           case 4:
+               GridPrincipal.Children.Clear();
+               GridPrincipal.Children.Add(new MyNotes());
+               break;
+
+                default:
                 break;
             }
         }
@@ -68,6 +82,11 @@ namespace LiverMDS
         {
             TrainsitionigContentSlide.OnApplyTemplate();
             GridCursor.Margin = new Thickness(0, (100 + (60 * index)), 0, 0);
+        }
+
+        private void ButtonFechar_Click_1(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

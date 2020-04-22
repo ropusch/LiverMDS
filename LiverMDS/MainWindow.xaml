@@ -42,7 +42,7 @@
                     <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" Margin="0 0 10 0">
                         <materialDesign:PackIcon Kind="Settings"/>
                     </Button>
-                    <Button x:Name="ButtonFechar" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                    <Button x:Name="ButtonFechar" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" Click="ButtonFechar_Click_1">
                         <materialDesign:PackIcon Kind="Power"/>
                     </Button>
                 </StackPanel>
@@ -108,7 +108,7 @@
             <!-- Bottom buttons-->
             <StackPanel x:Name ="MenuBottomButtons" HorizontalAlignment="Center" Orientation="Horizontal"  VerticalAlignment="Bottom">
                 <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
-                    <materialDesign:PackIcon Kind="GithubBox"/>
+                    <!--<materialDesign:PackIcon Kind="GithubBox"/>-->
                 </Button>
             </StackPanel>
         </Grid>
