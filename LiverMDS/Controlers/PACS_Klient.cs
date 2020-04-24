@@ -9,29 +9,32 @@ namespace LiverMDS.Controlers
 {
     class PACS_Klient
     {
-        private string aet { get; set; }
-        private int port { get; set; }
+        private string _aet;
+        private ushort _port;
 
-        public PACS_Klient(string aet, int port) {
+        public PACS_Klient(string aet, ushort port) {
             this.Update(aet, port);
         }
-        public string GetAet()
+        public string AET
         {
-            return this.aet;
+            get { return _aet; }
+            set { _aet = value; }
         }
-        public int GetPort()
+
+        public ushort Port
         {
-            return this.port;
+            get { return _port; }
+            set { _port = value; }
         }
-        public PACS_Klient Update(string aet, int port)
+        public PACS_Klient Update(string aet, ushort port)
         {
-            this.aet = aet;
-            this.port = port;
+            this._aet = aet;
+            this._port = port;
             return this;
         }                
         override public string ToString()
         {
-            return "PACS klient aet: " + aet + " port number: " + port.ToString();
+            return "PACS klient aet: " + _aet + " port number: " + _port.ToString();
         }
 
     }
